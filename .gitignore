@@ -1,0 +1,4 @@
+/UnityProject/*.csproj
+/UnityProject/*.sln
+/UnityProject/Library
+/UnityProject/.vs
