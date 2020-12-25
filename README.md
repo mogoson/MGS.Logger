@@ -10,6 +10,7 @@
 
 ## Platform
 - WindowsPlayer.
+- Android.
 
 ## Achieve
 - Output log to Unity console.
