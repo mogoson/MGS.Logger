@@ -18,7 +18,7 @@
 --------------------------------------------------------------------------
   [Achieve]
     UnityDebugger : Output log to Unity console.
-    LogUtilitySettings : Add UnityDebugger to LogUtility.
+    LogUtilityInitializer : Add UnityDebugger to LogUtility.
 
     ILogger : Interface of logger, implement custom logger and add to
     LogUtility to receive the log that print by LogUtility from other module.

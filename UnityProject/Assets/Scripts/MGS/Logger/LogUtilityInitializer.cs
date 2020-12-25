@@ -1,8 +1,8 @@
 /*************************************************************************
  *  Copyright © 2018 Mogoson. All rights reserved.
  *------------------------------------------------------------------------
- *  File         :  LogUtilitySettings.cs
- *  Description  :  Settings of log utility.
+ *  File         :  LogUtilityInitializer.cs
+ *  Description  :  Initializer for log utility.
  *------------------------------------------------------------------------
  *  Author       :  Mogoson
  *  Version      :  0.1.0
@@ -15,19 +15,22 @@ using UnityEngine;
 namespace MGS.Logger
 {
     /// <summary>
-    /// Settings of log utility.
+    /// Initializer for log utility.
     /// </summary>
-    static class LogUtilitySettings
+    sealed class LogUtilityInitializer
     {
         #region Public Method
         /// <summary>
-        /// Initialize log utility.
+        /// Awake initializer.
         /// </summary>
         [RuntimeInitializeOnLoadMethod]
-        static void Initialize()
+        static void Awake()
         {
-            //LogUtility auto create a FileLogger default, log dir is Environment.CurrentDirectory/Log
-            //if you do not need it, invoke the LogUtility.ClearLoggers() method to clear, then add your logger to LogUtility.
+            //Awake automatic execute after MonoBehaviour.Awake,
+            //so if you need to output logs earlier,
+            //your should move the following codes to your game start.
+
+            //Add logger to LogUtility to output log messages.
             LogUtility.AddLogger(new UnityDebugger());
         }
         #endregion

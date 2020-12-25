@@ -19,13 +19,14 @@ namespace MGS.Logger
         #region Private Method
         private void Awake()
         {
-            //LogUtilitySettings.Initialize add UnityDebugger to LogUtility execute after MonoBehaviour.Awake,
-            //so this log can not output to Unity console, but output to log file is work.
+            //This log can not output, see LogUtilityInitializer.Awake() to learn more.
             LogUtility.Log("LoggerTest Awake");
         }
 
         private void Start()
         {
+            //Just simple example,
+            //LogUtility is usually used for libraries that don't rely on Unity.
             LogUtility.LogWarning("LoggerTest Start");
         }
 
