@@ -1,7 +1,7 @@
 ﻿==========================================================================
   Copyright © 2020-2021 Mogoson. All rights reserved.
   Name: MGS-Logger
-  Author: Mogoson   Version: 1.0.0 Date: 12/19/2020
+  Author: Mogoson   Version: 1.0.1-preview1   Date: 12/26/2020
 ==========================================================================
   [Summary]
     Logger for Unity project.
@@ -15,6 +15,10 @@
   [Environment]
     Unity 5.0 or above.
     .Net Framework 3.5 or above.
+--------------------------------------------------------------------------
+  [Platform]
+    WindowsPlayer.
+    Android.
 --------------------------------------------------------------------------
   [Achieve]
     UnityDebugger : Output log to Unity console.
