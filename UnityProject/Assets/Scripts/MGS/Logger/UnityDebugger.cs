@@ -2,7 +2,7 @@
  *  Copyright © 2018 Mogoson. All rights reserved.
  *------------------------------------------------------------------------
  *  File         :  UnityDebugger.cs
- *  Description  :  Debugger for unity editor.
+ *  Description  :  Debugger for unity project.
  *------------------------------------------------------------------------
  *  Author       :  Mogoson
  *  Version      :  0.1.0
@@ -15,7 +15,7 @@ using UnityEngine;
 namespace MGS.Logger
 {
     /// <summary>
-    /// Debugger for unity editor.
+    /// Debugger for unity project.
     /// </summary>
     class UnityDebugger : Logger.ILogger
     {

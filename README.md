@@ -5,7 +5,11 @@
 
 ## Environment
 - Unity 5.0 or above.
+
 - .Net Framework 3.5 or above.
+
+## Platform
+- WindowsPlayer.
 
 ## Achieve
 - Output log to Unity console.
