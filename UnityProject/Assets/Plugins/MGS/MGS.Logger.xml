@@ -45,12 +45,6 @@
             <param name="args">Format arguments.</param>
             <returns>The log content.</returns>
         </member>
-        <member name="M:MGS.Logger.FileLogger.#ctor">
-            <summary>
-            Constructor.
-            Default dir is Environment.CurrentDirectory/Log
-            </summary>
-        </member>
         <member name="M:MGS.Logger.FileLogger.#ctor(System.String)">
             <summary>
             Constructor.
