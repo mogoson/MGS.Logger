@@ -30,8 +30,13 @@ namespace MGS.Logger
             //so if you need to output logs earlier,
             //your should move the following codes to your game start.
 
-            //Add logger to LogUtility to output log messages.
+#if UNITY_EDITOR
             LogUtility.AddLogger(new UnityDebugger());
+#else
+            //Use persistentDataPath support more platforms, example Android.
+            var logDir = string.Format("{0}/Log/", Application.persistentDataPath);
+            LogUtility.AddLogger(new FileLogger(logDir));
+#endif
         }
         #endregion
     }
