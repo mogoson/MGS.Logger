@@ -19,7 +19,7 @@ namespace MGS.Logger
         #region Private Method
         private void Awake()
         {
-            //This log can not output, see LogUtilityInitializer.Awake to learn more.
+            //This log can not output before Unity5.3, see LogUtilityInitializer.Awake to learn more.
             LogUtility.Log("LoggerTest Awake");
         }
 

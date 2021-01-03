@@ -1,12 +1,12 @@
 /*************************************************************************
- *  Copyright © 2018 Mogoson. All rights reserved.
+ *  Copyright © 2021 Mogoson. All rights reserved.
  *------------------------------------------------------------------------
- *  File         :  LogUtilityInitializer.cs
- *  Description  :  Initializer for log utility.
+ *  File         :  LogUtilityEditor.cs
+ *  Description  :  Editor for log utility.
  *------------------------------------------------------------------------
  *  Author       :  Mogoson
  *  Version      :  0.1.0
- *  Date         :  9/19/2018
+ *  Date         :  1/3/2021
  *  Description  :  Initial development version.
  *************************************************************************/
 
@@ -15,13 +15,13 @@ using UnityEngine;
 namespace MGS.Logger
 {
     /// <summary>
-    /// Initializer for log utility.
+    /// Editor for log utility.
     /// </summary>
-    sealed class LogUtilityInitializer
+    sealed class LogUtilityEditor
     {
         #region Public Method
         /// <summary>
-        /// Awake initializer.
+        /// Awake editor.
         /// </summary>
 #if UNITY_5_3_OR_NEWER
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
@@ -30,9 +30,7 @@ namespace MGS.Logger
 #endif
         static void Awake()
         {
-            //Use persistentDataPath support more platforms, example Android.
-            var logDir = string.Format("{0}/Log/", Application.persistentDataPath);
-            LogUtility.AddLogger(new FileLogger(logDir));
+            LogUtility.AddLogger(new UnityDebugger());
         }
         #endregion
     }
