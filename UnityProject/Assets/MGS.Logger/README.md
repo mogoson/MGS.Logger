@@ -38,54 +38,55 @@
 ## Usage
 - Use LogUtility to output log content.
 
-    ```C#
-    //The log output at Unity console in editor mode;
-    //and write to local file at the path:
-    //string.Format("{0}/Log/", Application.persistentDataPath)
+```C#
+//The log output at Unity console in editor mode;
+//and write to local file at the path:
+//string.Format("{0}/Log/", Application.persistentDataPath)
 
-    LogUtility.Log("Log info is {0}", info);
-    LogUtility.LogError("Log error is {0}", error);
-    LogUtility.LogWarning("Log warning is {0}", warning);
-    ```
+LogUtility.Log("Log info is {0}", info);
+LogUtility.LogError("Log error is {0}", error);
+LogUtility.LogWarning("Log warning is {0}", warning);
+```
 
 - Override log path.
 
-    ```c#
-    //Delete MGS.ULogger.dll
-    //Register the FileLogger to LogUtility.
-    //new a FileLogger with custom log file path;
-    
-    var logDir = string.Format("{0}/Log/", Environment.CurrentDirectory);
-    LogUtility.Register(new FileLogger(logDir));
-    ```
+```c#
+//Delete MGS.ULogger.dll
+//Register the FileLogger to LogUtility.
+//new a FileLogger with custom log file path;
+
+var logDir = string.Format("{0}/Log/", Environment.CurrentDirectory);
+LogUtility.Register(new FileLogger(logDir));
+```
 
 - Override the Logger of LogUtility.
 
-  ```C#
-  //Delete MGS.ULogger.dll
-  //Implemente a CustomLogger;
+```C#
+//Delete MGS.ULogger.dll
+//Implemente a CustomLogger;
 //Register the CustomLogger to LogUtility.
-  
-  public class CustomLogger : ILogger
+
+public class CustomLogger : ILogger
+{
+  public void Log(string format, params object[] args)
   {
-      public void Log(string format, params object[] args)
-      {
-  		//Implemente the logic.
-      }
-  
-      public void LogError(string format, params object[] args)
-      {
-  		//Implemente the logic.
-      }
-  
-      public void LogWarning(string format, params object[] args)
-      {
-  		//Implemente the logic.
-      }
+    //Implemente the logic.
   }
-  
-  LogUtility.Register(new CustomLogger());
-  ```
+
+  public void LogError(string format, params object[] args)
+  {
+    //Implemente the logic.
+  }
+
+  public void LogWarning(string format, params object[] args)
+  {
+    //Implemente the logic.
+  }
+}
+
+LogUtility.Register(new CustomLogger());
+```
+
 
 ## Demo
 
