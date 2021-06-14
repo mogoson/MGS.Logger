@@ -108,19 +108,19 @@
             Loggers of utility.
             </summary>
         </member>
-        <member name="M:MGS.Logger.LogUtility.AddLogger(MGS.Logger.ILogger)">
+        <member name="M:MGS.Logger.LogUtility.Register(MGS.Logger.ILogger)">
             <summary>
-            Add logger to utility.
+            Register logger to utility.
             </summary>
             <param name="logger">Logger for output message.</param>
         </member>
-        <member name="M:MGS.Logger.LogUtility.RemoveLogger(MGS.Logger.ILogger)">
+        <member name="M:MGS.Logger.LogUtility.Unregister(MGS.Logger.ILogger)">
             <summary>
-            Remove logger from utility.
+            Unregister logger from utility.
             </summary>
             <param name="logger">Logger for output message.</param>
         </member>
-        <member name="M:MGS.Logger.LogUtility.ClearLoggers">
+        <member name="M:MGS.Logger.LogUtility.Clear">
             <summary>
             Clear the loggers of utility.
             </summary>

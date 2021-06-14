@@ -19,8 +19,21 @@
 
 ## Implemented
 
+### MGS.Logger.dll
+
+- ILogger: Interface of logger.
+
 - LogUtility: provide unified entrance of log output.
 - FileLogger: provide a default logger that you can use to log to local file.
+
+### MGS.ULogger.dll
+
+- LogUtilityInitializer: Register a FileLogger to LogUtility.
+
+### MGS.ULoggerEditor.dll
+
+- UnityDebugger: Implemente ILogger base Unity Debug.
+- LogUtilityEditor: Register a UnityDebuggerto LogUtility.
 
 ## Usage
 - Use LogUtility to output log content.
@@ -78,10 +91,9 @@
 
 - Demos in the path "MGS.Logger/Scenes" provide reference to you.
 
-## Preview
+## Source
 
-![Logger Output](./Attachment/images/LoggerOutput.PNG)
-
+- https://github.com/mogoson/MGS.Logger.
 ------
 
 Copyright © 2021 Mogoson.	mogoson@outlook.com
