@@ -6,7 +6,7 @@
 
 ## Environment
 
-- Unity 5.3 or above.
+- Unity 5.0 or above.
 
 - .Net Framework 3.5 or above.
 
