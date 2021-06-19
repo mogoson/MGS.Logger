@@ -90,7 +90,7 @@ LogUtility.Register(new CustomLogger());
 
 ## Demo
 
-- Demos in the path "MGS.Logger/Scenes" provide reference to you.
+- Demos in the path "MGS.Packages/Logger/Demo/" provide reference to you.
 
 ## Source
 
