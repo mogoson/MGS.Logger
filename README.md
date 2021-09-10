@@ -14,6 +14,7 @@
 
 ## Platform
 - Windows
+- Android
 
 ## Demand
 - Output log to local file.
