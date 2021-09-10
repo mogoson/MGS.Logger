@@ -6,15 +6,16 @@
 - Logger for C# project develop.
 - Logger for Unity project.
 
+## Platform
+
+- Windows
+- Android
+
 ## Environment
 
 - Unity 5.0 or above.
 
 - .Net Framework 3.5 or above.
-
-## Platform
-- Windows
-- Android
 
 ## Demand
 - Output log to local file.

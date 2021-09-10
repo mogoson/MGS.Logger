@@ -5,6 +5,11 @@
 ## Summary
 - Logger for C# project develop.
 
+## Platform
+
+- Windows
+- Android
+
 ## Environment
 - .Net Framework 3.5 or above.
 
