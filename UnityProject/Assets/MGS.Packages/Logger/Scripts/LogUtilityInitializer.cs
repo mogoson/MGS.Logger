@@ -33,6 +33,9 @@ namespace MGS.Logger
             //Use persistentDataPath support more platforms, example Android.
             var logDir = string.Format("{0}/Log/", Application.persistentDataPath);
             LogUtility.Register(new FileLogger(logDir));
+#if UNITY_EDITOR
+            Debug.LogFormat("Register file logger to the directory {0}", logDir);
+#endif
         }
         #endregion
     }
