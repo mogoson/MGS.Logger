@@ -19,7 +19,6 @@ namespace MGS.Logger
     /// </summary>
     public sealed class LogUtilityEditor
     {
-        #region Public Method
         /// <summary>
         /// Awake editor.
         /// </summary>
@@ -32,6 +31,5 @@ namespace MGS.Logger
         {
             LogUtility.Register(new UnityDebugger());
         }
-        #endregion
     }
 }

@@ -19,7 +19,6 @@ namespace MGS.Logger
     /// </summary>
     public class UnityDebugger : Logger.ILogger
     {
-        #region Public Method
         /// <summary>
         /// Constructor.
         /// </summary>
@@ -54,6 +53,5 @@ namespace MGS.Logger
         {
             Debug.LogWarningFormat(format, args);
         }
-        #endregion
     }
 }
