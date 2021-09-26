@@ -20,19 +20,19 @@ namespace MGS.Logger.Demo
         private void Awake()
         {
             //This log can not output to the default logger before Unity5.3, see LogUtilityInitializer.Awake to learn more.
-            LogUtility.Log("LoggerTest Awake");
+            Logger.Log("LoggerTest Awake");
         }
 
         private void Start()
         {
             //Just simple example,
             //LogUtility is usually used for libraries that don't rely on Unity.
-            LogUtility.LogWarning("LoggerTest Start");
+            Logger.LogWarning("LoggerTest Start");
         }
 
         private void OnDestroy()
         {
-            LogUtility.LogError("LoggerTest OnDestroy");
+            Logger.LogError("LoggerTest OnDestroy");
         }
         #endregion
     }
