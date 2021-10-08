@@ -12,7 +12,7 @@
 
 using UnityEngine;
 
-namespace MGS.Logger
+namespace MGS.Logger.UEditor
 {
     /// <summary>
     /// Editor for log utility.
