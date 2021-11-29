@@ -1,7 +1,7 @@
 /*************************************************************************
- *  Copyright © 2020 Mogoson. All rights reserved.
+ *  Copyright © 2021 Mogoson. All rights reserved.
  *------------------------------------------------------------------------
- *  File         :  LoggerTest.cs
+ *  File         :  LoggerDemo.cs
  *  Description  :  Null.
  *------------------------------------------------------------------------
  *  Author       :  Mogoson
@@ -14,25 +14,25 @@ using UnityEngine;
 
 namespace MGS.Logger.Demo
 {
-    public class LoggerTest : MonoBehaviour
+    public class LoggerDemo : MonoBehaviour
     {
         #region Private Method
         private void Awake()
         {
             //This log can not output to the default logger before Unity5.3, see LogUtilityInitializer.Awake to learn more.
-            Logger.Log("LoggerTest Awake");
+            DemoLogger.Log("LoggerTest Awake");
         }
 
         private void Start()
         {
             //Just simple example,
             //LogUtility is usually used for libraries that don't rely on Unity.
-            Logger.LogWarning("LoggerTest Start");
+            DemoLogger.LogWarning("LoggerTest Start");
         }
 
         private void OnDestroy()
         {
-            Logger.LogError("LoggerTest OnDestroy");
+            DemoLogger.LogError("LoggerTest OnDestroy");
         }
         #endregion
     }

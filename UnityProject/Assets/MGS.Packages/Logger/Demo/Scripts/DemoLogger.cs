@@ -1,7 +1,7 @@
 ﻿/*************************************************************************
- *  Copyright © 2020 Mogoson. All rights reserved.
+ *  Copyright © 2021 Mogoson. All rights reserved.
  *------------------------------------------------------------------------
- *  File         :  Logger.cs
+ *  File         :  DemoLogger.cs
  *  Description  :  Null.
  *------------------------------------------------------------------------
  *  Author       :  Mogoson
@@ -12,7 +12,7 @@
 
 namespace MGS.Logger.Demo
 {
-    public sealed class Logger
+    public sealed class DemoLogger
     {
         // A good way to use the LogUtility is wrap it specifically.
         // Example: add module prefix identification and more infos.

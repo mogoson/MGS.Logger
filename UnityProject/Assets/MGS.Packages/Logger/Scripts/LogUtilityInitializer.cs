@@ -46,6 +46,7 @@ namespace MGS.Logger
             {
                 if ((lastClearTime - DateTime.Now).Days > 60)
                 {
+                    //Clear log files (Keep the last 10 files).
                     logger.ClearLogFile(10);
                     PlayerPrefs.SetString(KEY_LAST_TIME_CLEAR_LOG, DateTime.Now.ToString());
                 }

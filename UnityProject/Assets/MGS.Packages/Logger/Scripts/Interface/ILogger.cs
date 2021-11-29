@@ -1,57 +1,43 @@
 ﻿/*************************************************************************
- *  Copyright © 2018 Mogoson. All rights reserved.
+ *  Copyright © 2021 Mogoson. All rights reserved.
  *------------------------------------------------------------------------
- *  File         :  UnityDebugger.cs
- *  Description  :  Debugger for unity editor.
+ *  File         :  ILogger.cs
+ *  Description  :  Interface of logger.
  *------------------------------------------------------------------------
  *  Author       :  Mogoson
- *  Version      :  0.1.0
- *  Date         :  9/19/2018
+ *  Version      :  1.0
+ *  Date         :  9/5/2015
  *  Description  :  Initial development version.
  *************************************************************************/
 
-using UnityEngine;
-
-namespace MGS.Logger.Editors
+namespace MGS.Logger
 {
     /// <summary>
-    /// Debugger for unity editor.
+    /// Interface of logger.
     /// </summary>
-    public class UnityDebugger : Logger.ILogger
+    public interface ILogger
     {
-        /// <summary>
-        /// Constructor.
-        /// </summary>
-        public UnityDebugger() { }
-
+        #region Method
         /// <summary>
         /// Logs a formatted message.
         /// </summary>
         /// <param name="format">A composite format string.</param>
         /// <param name="args">Format arguments.</param>
-        public void Log(string format, params object[] args)
-        {
-            Debug.LogFormat(format, args);
-        }
+        void Log(string format, params object[] args);
 
         /// <summary>
         /// Logs a formatted error message.
         /// </summary>
         /// <param name="format">A composite format string.</param>
         /// <param name="args">Format arguments.</param>
-        public void LogError(string format, params object[] args)
-        {
-            Debug.LogErrorFormat(format, args);
-        }
+        void LogError(string format, params object[] args);
 
         /// <summary>
         /// Logs a formatted warning message.
         /// </summary>
         /// <param name="format">A composite format string.</param>
         /// <param name="args">Format arguments.</param>
-        public void LogWarning(string format, params object[] args)
-        {
-            Debug.LogWarningFormat(format, args);
-        }
+        void LogWarning(string format, params object[] args);
+        #endregion
     }
 }

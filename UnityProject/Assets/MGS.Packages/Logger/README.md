@@ -21,19 +21,17 @@
 - Output log to local file.
 - Implement custom logger to output the log that print by LogUtility from other module.
 
-## Implemented
-
-```C#
-public interface IFilter{}
-
-public interface ILogger{}
-
-public class FileLogger : ILogger{}
-
-public sealed class LogUtility{}
-```
-
 ## Usage
+
+- Reference
+
+  If you need use LogUtility in dll：
+
+  - Create a C# project, move the following files into the project:
+    - ./Scripts/Interface/...
+    - ./Scripts/FileLogger.cs
+    - ./Scripts/LogUtility.cs
+  - Compile project as dll to reference.
 
 - Use LogUtility to output log content.
 
@@ -50,7 +48,7 @@ LogUtility.LogWarning("Log warning is {0}", warning);
 - Wrap LogUtility specifically.
 
 ```C#
-public sealed class Logger
+public sealed class DemoLogger
 {
     // A good way to use the LogUtility is wrap it specifically.
     // Example: add module prefix identification and more infos.
@@ -129,7 +127,7 @@ LogUtility.Register(new CustomLogger());
 
 ## Demo
 
-- Demos in the path "MGS.Packages/Logger/Demo/" provide reference to you.
+- Demos in the path "./Demo/" provide reference to you.
 
 ## Source
 
