@@ -28,7 +28,7 @@ namespace MGS.Logger
         /// <summary>
         /// Awake initializer.
         /// </summary>
-#if UNITY_5_3_OR_NEWER
+#if UNITY_5_3 || UNITY_5_3_OR_NEWER
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
 #else
         [RuntimeInitializeOnLoadMethod]
