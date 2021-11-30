@@ -128,7 +128,7 @@ LogUtility.Register(new CustomLogger());
 
 ## Demo
 
-- Demos in the path "./Demo/" provide reference to you.
+- Demos in the path "MGS.Packages/Logger/Demo/" provide reference to you.
 
 ## Preview
 
