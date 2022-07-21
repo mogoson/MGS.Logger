@@ -29,8 +29,8 @@
 
   - Create a C# project, move the following files into the project:
     - ./Scripts/Interface/...
-    - ./Scripts/FileLogger.cs
-    - ./Scripts/LogUtility.cs
+    - ./Scripts/Implement/FileLogger.cs
+    - ./Scripts/Implement/LogUtility.cs
   - Compile project as dll to reference.
 
 - Use LogUtility to output log content.
