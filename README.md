@@ -130,10 +130,6 @@ LogUtility.Register(new CustomLogger());
 
 - Demos in the path "MGS.Packages/Logger/Demo/" provide reference to you.
 
-## Preview
-
-![Logger Output](./Attachment/images/LoggerOutput.PNG)
-
 ------
 
 Copyright © 2021 Mogoson.	mogoson@outlook.com
