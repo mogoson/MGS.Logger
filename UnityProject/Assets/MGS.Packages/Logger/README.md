@@ -18,7 +18,7 @@
 
 ## Version
 
-- 1.5.0
+- 1.5.1
 
 ## Demand
 - Output log to local file.
@@ -136,4 +136,4 @@ LogUtility.Register(new CustomLogger());
 - https://github.com/mogoson/MGS.Logger.
 ------
 
-Copyright © 2021 Mogoson.	mogoson@outlook.com
+Copyright © 2022 Mogoson.	mogoson@outlook.com
