@@ -14,8 +14,11 @@
 ## Environment
 
 - Unity 5.0 or above.
-
 - .Net Framework 3.5 or above.
+
+## Version
+
+- 1.5.0
 
 ## Demand
 - Output log to local file.
@@ -28,11 +31,10 @@
   If you need use LogUtility in dll：
 
   - Create a C# project, move the following files into the project:
-    - ./Scripts/Interface/...
-    - ./Scripts/Implement/FileLogger.cs
-    - ./Scripts/Implement/LogUtility.cs
+    - ./Logger/Runtime/Interface/...
+    - ./Logger/Runtime/Implement/...
   - Compile project as dll to reference.
-
+  
 - Use LogUtility to output log content.
 
 ```C#
@@ -88,7 +90,7 @@ LogUtility.Register(new FileLogger(logDir, new Filter()));
 - Override log path.
 
 ```c#
-//Override the LogUtilityInitializer.Awake();
+//Override the LogInitializer.Awake();
 //new a FileLogger with custom log file path;
 //Register the FileLogger to LogUtility.
 
@@ -99,7 +101,7 @@ LogUtility.Register(new FileLogger(logDir));
 - Override the Logger of LogUtility.
 
 ```C#
-//Override the LogUtilityInitializer.Awake();
+//Override the LogInitializer.Awake();
 //Implemente a CustomLogger;
 //Register the CustomLogger to LogUtility.
 

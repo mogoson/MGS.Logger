@@ -1,8 +1,8 @@
 ﻿/*************************************************************************
  *  Copyright © 2021 Mogoson. All rights reserved.
  *------------------------------------------------------------------------
- *  File         :  LogUtilityEditor.cs
- *  Description  :  Editor for log utility.
+ *  File         :  DebuggerRegister.cs
+ *  Description  :  Register for debugger.
  *------------------------------------------------------------------------
  *  Author       :  Mogoson
  *  Version      :  0.1.0
@@ -15,12 +15,12 @@ using UnityEngine;
 namespace MGS.Logger.Editors
 {
     /// <summary>
-    /// Editor for log utility.
+    /// Register for debugger.
     /// </summary>
-    public sealed class LogUtilityEditor
+    public sealed class DebuggerRegister
     {
         /// <summary>
-        /// Awake editor.
+        /// Awake register.
         /// </summary>
 #if UNITY_5_3 || UNITY_5_3_OR_NEWER
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
@@ -29,7 +29,7 @@ namespace MGS.Logger.Editors
 #endif
         private static void Awake()
         {
-            LogUtility.Register(new UnityDebugger());
+            LogUtility.Register(new Debugger());
         }
     }
 }

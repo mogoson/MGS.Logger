@@ -1,8 +1,8 @@
 ﻿/*************************************************************************
  *  Copyright © 2018 Mogoson. All rights reserved.
  *------------------------------------------------------------------------
- *  File         :  LogUtilityInitializer.cs
- *  Description  :  Initializer for log utility.
+ *  File         :  LogInitializer.cs
+ *  Description  :  Initializer for log.
  *------------------------------------------------------------------------
  *  Author       :  Mogoson
  *  Version      :  0.1.0
@@ -16,9 +16,9 @@ using UnityEngine;
 namespace MGS.Logger
 {
     /// <summary>
-    /// Initializer for log utility.
+    /// Initializer for log.
     /// </summary>
-    public sealed class LogUtilityInitializer
+    public sealed class LogInitializer
     {
         /// <summary>
         /// Key of last time clear log.

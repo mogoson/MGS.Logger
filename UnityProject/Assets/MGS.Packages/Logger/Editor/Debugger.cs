@@ -1,7 +1,7 @@
 ﻿/*************************************************************************
  *  Copyright © 2018 Mogoson. All rights reserved.
  *------------------------------------------------------------------------
- *  File         :  UnityDebugger.cs
+ *  File         :  Debugger.cs
  *  Description  :  Debugger for unity editor.
  *------------------------------------------------------------------------
  *  Author       :  Mogoson
@@ -17,12 +17,12 @@ namespace MGS.Logger.Editors
     /// <summary>
     /// Debugger for unity editor.
     /// </summary>
-    public class UnityDebugger : Logger.ILogger
+    public class Debugger : Logger.ILogger
     {
         /// <summary>
         /// Constructor.
         /// </summary>
-        public UnityDebugger() { }
+        public Debugger() { }
 
         /// <summary>
         /// Logs a formatted message.
