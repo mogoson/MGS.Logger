@@ -5,3 +5,6 @@
 /UnityProject/Temp
 /UnityProject/*.unitypackage
 /UnityProject/obj
+/Temp
+/Library
+/Logs
