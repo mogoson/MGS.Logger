@@ -1,6 +1,8 @@
 {
     "description": "Logger for C# project develop",
     "displayName": "Logger",
+    "keywords": [
+    ],
     "name": "com.mgs.Logger",
     "unity": "2019.4",
     "version": "1.0.0"
