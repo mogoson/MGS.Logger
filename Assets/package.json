@@ -3,7 +3,7 @@
     "displayName": "Logger",
     "keywords": [
     ],
-    "name": "com.mgs.Logger",
+    "name": "com.mgs.logger",
     "unity": "2019.4",
     "version": "1.0.0"
 }
