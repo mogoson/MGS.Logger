@@ -213,8 +213,7 @@ namespace MGS.Logger
             foreach (var file in files)
             {
                 var fileName = Path.GetFileNameWithoutExtension(file);
-                DateTime fileDate;
-                if (DateTime.TryParse(fileName, out fileDate) && fileDate >= before)
+                if (DateTime.TryParse(fileName, out DateTime fileDate) && fileDate >= before)
                 {
                     continue;
                 }

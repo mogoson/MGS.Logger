@@ -18,13 +18,13 @@ namespace MGS.Logger
     /// <summary>
     /// Utility for log output.
     /// </summary>
-    public sealed class LogUtility
+    public static class LogUtility
     {
         #region Field and Property
         /// <summary>
         /// Loggers of utility.
         /// </summary>
-        private static ICollection<ILogger> loggers = new List<ILogger>();
+        private static readonly ICollection<ILogger> loggers = new List<ILogger>();
         #endregion
 
         #region

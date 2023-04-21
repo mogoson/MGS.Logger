@@ -18,7 +18,7 @@ namespace MGS.Logger
     /// <summary>
     /// Initializer for log.
     /// </summary>
-    public sealed class LogInitializer
+    public static class LogInitializer
     {
         /// <summary>
         /// Key of last time clear log.
@@ -41,8 +41,7 @@ namespace MGS.Logger
 
             //Clear log files if out of 60 days.
             var lastRecord = PlayerPrefs.GetString(KEY_LAST_TIME_CLEAR_LOG);
-            var lastClearTime = DateTime.Now;
-            if (DateTime.TryParse(lastRecord, out lastClearTime))
+            if (DateTime.TryParse(lastRecord, out DateTime lastClearTime))
             {
                 if ((lastClearTime - DateTime.Now).Days > 60)
                 {
