@@ -14,11 +14,12 @@
 ## Environment
 
 - Unity 5.0 or above.
+
 - .Net Framework 3.5 or above.
 
 ## Version
 
-- 1.5.1
+- 2.0.0
 
 ## Demand
 - Output log to local file.
@@ -34,7 +35,8 @@
     - ./Logger/Runtime/Interface/...
     - ./Logger/Runtime/Implement/...
   - Compile project as dll to reference.
-  
+
+
 - Use LogUtility to output log content.
 
 ```C#
@@ -50,7 +52,7 @@ LogUtility.LogWarning("Log warning is {0}", warning);
 - Wrap LogUtility specifically.
 
 ```C#
-public sealed class DemoLogger
+public sealed class Logger
 {
     // A good way to use the LogUtility is wrap it specifically.
     // Example: add module prefix identification and more infos.
@@ -126,14 +128,6 @@ public class CustomLogger : ILogger
 LogUtility.Register(new CustomLogger());
 ```
 
-
-## Demo
-
-- Demos in the path "MGS.Packages/Logger/Demo/" provide reference to you.
-
-## Source
-
-- https://github.com/mogoson/MGS.Logger.
 ------
 
-Copyright © 2022 Mogoson.	mogoson@outlook.com
+Copyright © 2023 Mogoson.	mogoson@outlook.com

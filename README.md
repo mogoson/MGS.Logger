@@ -17,6 +17,10 @@
 
 - .Net Framework 3.5 or above.
 
+## Version
+
+- 2.0.0
+
 ## Demand
 - Output log to local file.
 - Implement custom logger to output the log that print by LogUtility from other module.
@@ -124,11 +128,6 @@ public class CustomLogger : ILogger
 LogUtility.Register(new CustomLogger());
 ```
 
-
-## Demo
-
-- Demos in the path "MGS.Packages/Logger/Demo/" provide reference to you.
-
 ------
 
-Copyright © 2022 Mogoson.	mogoson@outlook.com
+Copyright © 2023 Mogoson.	mogoson@outlook.com
