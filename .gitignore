@@ -8,3 +8,7 @@
 /Temp
 /Library
 /Logs
+/obj
+/.vs
+/*.csproj
+/*.sln

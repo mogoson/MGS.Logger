@@ -32,8 +32,7 @@
   If you need use LogUtility in dll：
 
   - Create a C# project, move the following files into the project:
-    - ./Logger/Runtime/Interface/...
-    - ./Logger/Runtime/Implement/...
+    - ./Runtime/...
   - Compile project as dll to reference.
 
 
