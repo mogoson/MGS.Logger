@@ -12,3 +12,6 @@
 /.vs
 /*.csproj
 /*.sln
+/build
+/*.vsconfig
+/UserSettings

@@ -57,17 +57,16 @@ namespace MGS.Logger
         /// Logs a formatted message to local file.
         /// </summary>
         /// <param name="tag">Tag of log message.</param>
-        /// <param name="format">A composite format string.</param>
-        /// <param name="args">Format arguments.</param>
-        protected virtual void LogToFile(string tag, string format, params object[] args)
+        /// <param name="content">Content of log.</param>
+        protected virtual void LogToFile(string tag, string content)
         {
-            if (Filter != null && !Filter.Select(tag, format, args))
+            if (Filter != null && !Filter.Select(tag, content))
             {
                 return;
             }
 
             var logFilePath = ResolveLogFile(RootDir);
-            var logContent = ResolveLogContent(tag, format, args);
+            var logContent = ResolveLogContent(tag, content);
             AppendToFile(logFilePath, logContent);
         }
 
@@ -86,14 +85,12 @@ namespace MGS.Logger
         /// Resolve the log content.
         /// </summary>
         /// <param name="tag">Tag of log message.</param>
-        /// <param name="format">A composite format string.</param>
-        /// <param name="args">Format arguments.</param>
+        /// <param name="content">Content of log.</param>
         /// <returns>The log content.</returns>
-        protected virtual string ResolveLogContent(string tag, string format, params object[] args)
+        protected virtual string ResolveLogContent(string tag, string content)
         {
-            var logTimeStamp = DateTime.Now.ToLongTimeString();
-            var formatMsg = string.Format(format, args);
-            return string.Format("{0}-{1}-{2}\r\n\r\n", logTimeStamp, tag, formatMsg);
+            var timeStamp = DateTime.Now.ToLongTimeString();
+            return $"{timeStamp}-{tag}-{content}\r\n";
         }
 
         /// <summary>
@@ -155,31 +152,28 @@ namespace MGS.Logger
         /// <summary>
         /// Logs a formatted message to local file.
         /// </summary>
-        /// <param name="format">A composite format string.</param>
-        /// <param name="args">Format arguments.</param>
-        public void Log(string format, params object[] args)
+        /// <param name="content">Content of log.</param>
+        public void Log(string content)
         {
-            LogToFile(TAG_LOG, format, args);
+            LogToFile(TAG_LOG, content);
         }
 
         /// <summary>
         /// Logs a formatted error message to local file.
         /// </summary>
-        /// <param name="format">A composite format string.</param>
-        /// <param name="args">Format arguments.</param>
-        public void LogError(string format, params object[] args)
+        /// <param name="content">Content of log.</param>
+        public void LogError(string content)
         {
-            LogToFile(TAG_ERROR, format, args);
+            LogToFile(TAG_ERROR, content);
         }
 
         /// <summary>
         /// Logs a formatted warning message to local file.
         /// </summary>
-        /// <param name="format">A composite format string.</param>
-        /// <param name="args">Format arguments.</param>
-        public void LogWarning(string format, params object[] args)
+        /// <param name="content">Content of log.</param>
+        public void LogWarning(string content)
         {
-            LogToFile(TAG_WARNING, format, args);
+            LogToFile(TAG_WARNING, content);
         }
 
         /// <summary>

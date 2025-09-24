@@ -17,21 +17,16 @@ namespace MGS.Logger.Editors
     /// <summary>
     /// Debugger for unity editor.
     /// </summary>
-    public class Debugger : Logger.ILogger
+    public class Debugger : ILogger
     {
-        /// <summary>
-        /// Constructor.
-        /// </summary>
-        public Debugger() { }
-
         /// <summary>
         /// Logs a formatted message.
         /// </summary>
         /// <param name="format">A composite format string.</param>
         /// <param name="args">Format arguments.</param>
-        public void Log(string format, params object[] args)
+        public void Log(string content)
         {
-            Debug.LogFormat(format, args);
+            Debug.Log(content);
         }
 
         /// <summary>
@@ -39,9 +34,9 @@ namespace MGS.Logger.Editors
         /// </summary>
         /// <param name="format">A composite format string.</param>
         /// <param name="args">Format arguments.</param>
-        public void LogError(string format, params object[] args)
+        public void LogError(string content)
         {
-            Debug.LogErrorFormat(format, args);
+            Debug.LogError(content);
         }
 
         /// <summary>
@@ -49,9 +44,9 @@ namespace MGS.Logger.Editors
         /// </summary>
         /// <param name="format">A composite format string.</param>
         /// <param name="args">Format arguments.</param>
-        public void LogWarning(string format, params object[] args)
+        public void LogWarning(string content)
         {
-            Debug.LogWarningFormat(format, args);
+            Debug.LogWarning(content);
         }
     }
 }

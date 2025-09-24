@@ -18,7 +18,7 @@ namespace MGS.Logger
     /// <summary>
     /// Initializer for log.
     /// </summary>
-    public static class LogInitializer
+    public sealed class LogInitializer
     {
         /// <summary>
         /// Key of last time clear log.
@@ -35,10 +35,13 @@ namespace MGS.Logger
 #endif
         private static void Awake()
         {
-            //Use persistentDataPath support more platforms, example Android.
+            //Register file logger to LogUtility.
             var logDir = string.Format("{0}/Log/", Application.persistentDataPath);
             var logger = new FileLogger(logDir);
-
+            LogUtility.Register(logger);
+#if UNITY_EDITOR
+            Debug.LogFormat("Register file logger to the directory {0}", logDir);
+#endif
             //Clear log files if out of 60 days.
             var lastRecord = PlayerPrefs.GetString(KEY_LAST_TIME_CLEAR_LOG);
             if (DateTime.TryParse(lastRecord, out DateTime lastClearTime))
@@ -54,11 +57,6 @@ namespace MGS.Logger
             {
                 PlayerPrefs.SetString(KEY_LAST_TIME_CLEAR_LOG, DateTime.Now.ToString());
             }
-
-            LogUtility.Register(logger);
-#if UNITY_EDITOR
-            Debug.LogFormat("Register file logger to the directory {0}", logDir);
-#endif
         }
     }
 }

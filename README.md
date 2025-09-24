@@ -6,28 +6,24 @@
 - Logger for C# project develop.
 - Logger for Unity project.
 
-## Platform
 
-- Windows
-- Android
+## Ability
 
-## Environment
-
-- Unity 5.0 or above.
-
-- .Net Framework 3.5 or above.
-
-## Version
-
-- 2.0.0
-
-## Demand
 - Output log to local file.
 - Implement custom logger to output the log that print by LogUtility from other module.
 
-## Usage
-- Use LogUtility to output log content.
+## Install
 
-------
+- Unity --> Window --> Package Manager --> "+" --> Add package from git URL...
 
-Copyright © 2023 Mogoson.	mogoson@outlook.com
+  ```text
+  https://github.com/mogoson/MGS.Logger.git?path=/Assets
+  ```
+
+## Samples
+
+- Unity --> Window --> Package Manager --> Packages-Mogoson --> Logger --> Samples.
+
+---
+
+Copyright © 2025 Mogoson.	mogoson@outlook.com

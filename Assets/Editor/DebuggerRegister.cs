@@ -17,7 +17,7 @@ namespace MGS.Logger.Editors
     /// <summary>
     /// Register for debugger.
     /// </summary>
-    public static class DebuggerRegister
+    public sealed class DebuggerRegister
     {
         /// <summary>
         /// Awake register.

@@ -1,9 +1,15 @@
 {
-    "description": "Logger for C# project develop",
-    "displayName": "Logger",
-    "keywords": [
-    ],
     "name": "com.mgs.logger",
-    "unity": "2019.4",
-    "version": "1.0.0"
+    "version": "1.0.0",
+    "displayName": "Logger",
+    "description": "Logger for C# project develop.",
+    "unity": "2021.3",
+    "keywords": [
+        "logger"
+    ],
+    "author": {
+        "name": "Mogoson",
+        "email": "mogoson@outlook.com",
+        "url": "https://github.com/mogoson"
+    }
 }

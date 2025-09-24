@@ -18,7 +18,7 @@ namespace MGS.Logger
     /// <summary>
     /// Utility for log output.
     /// </summary>
-    public static class LogUtility
+    public sealed class LogUtility
     {
         #region Field and Property
         /// <summary>
@@ -36,8 +36,7 @@ namespace MGS.Logger
             AppDomain.CurrentDomain.UnhandledException += (s, e) =>
             {
                 var ex = e.ExceptionObject as Exception;
-                LogError("UnhandledException: Runtime terminating {0}\r\n{1}{2}{3}",
-                    e.IsTerminating, s, ex.Message, ex.StackTrace);
+                LogError("UnhandledException: Runtime terminating {e.IsTerminating}\r\n{s}\r\n{ex.Message}\r\n{ex.StackTrace}");
             };
         }
         #endregion
@@ -85,39 +84,36 @@ namespace MGS.Logger
         /// <summary>
         /// Logs a formatted message.
         /// </summary>
-        /// <param name="format">A composite format string.</param>
-        /// <param name="args">Format arguments.</param>
-        public static void Log(string format, params object[] args)
+        /// <param name="content">Content of log.</param>
+        public static void Log(string content)
         {
             foreach (var logger in loggers)
             {
-                logger.Log(format, args);
+                logger.Log(content);
             }
         }
 
         /// <summary>
         /// Logs a formatted error message.
         /// </summary>
-        /// <param name="format">A composite format string.</param>
-        /// <param name="args">Format arguments.</param>
-        public static void LogError(string format, params object[] args)
+        /// <param name="content">Content of log.</param>
+        public static void LogError(string content)
         {
             foreach (var logger in loggers)
             {
-                logger.LogError(format, args);
+                logger.LogError(content);
             }
         }
 
         /// <summary>
         /// Logs a formatted warning message.
         /// </summary>
-        /// <param name="format">A composite format string.</param>
-        /// <param name="args">Format arguments.</param>
-        public static void LogWarning(string format, params object[] args)
+        /// <param name="content">Content of log.</param>
+        public static void LogWarning(string content)
         {
             foreach (var logger in loggers)
             {
-                logger.LogWarning(format, args);
+                logger.LogWarning(content);
             }
         }
 
@@ -127,7 +123,7 @@ namespace MGS.Logger
         /// <param name="ex">Instance of exception.</param>
         public static void LogException(Exception ex)
         {
-            LogError("{0}\r\n{1}", ex.Message, ex.StackTrace);
+            LogError($"{ex.Message}\r\n{ex.StackTrace}");
         }
         #endregion
     }
